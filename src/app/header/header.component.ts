@@ -1,38 +1,47 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   template: `
-  <header class="wrapper-header">
-  <div class="main-header">
-    <div class="container">
-      <div class="wrapper-content">
-        <div class="nav-actions">
-          <button class="nav-btn" (click)="toggleNav()" role="button" type="button"> </button>
-          <div class="brand" [routerLink]="['']">
-          </div>
-        </div>
+  <header class="wrapper-header"  >
+    <div class="main-header" [ngClass]="{'secondary-scheme' : defaultColor}">
+      <div class="container">
+        <nav>
+          <ul>
+            <li class="navSection brand">
+              <a routerLink="" class="link-brand" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"
+              aria-label="AACB Guide HomePage">
+                <h1 class="logo">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60.191 61.44"> <defs> <style> .cls-1 { fill: #655efe; } .cls-2 { fill: #fff; font-size: 32px; } .cls-2, .cls-3 { font-family: Arial-BoldMT, Arial; font-weight: 700; } .cls-3 { fill: #f58d00; font-size: 43px; } </style> </defs> <g id="Group_28" data-name="Group 28" transform="translate(0 0)"> <rect id="Rectangle_22" data-name="Rectangle 22" class="cls-1" width="60.191" height="60.191" rx="10"/> <text id="B" class="cls-2" transform="translate(27.678 53.379)"><tspan x="0" y="0">B</tspan></text> <text id="A" class="cls-2" transform="translate(7.176 29.706)"><tspan x="0" y="0">A</tspan></text> <text id="A-2" data-name="A" class="cls-2" transform="translate(27.696 29.706)"><tspan x="0" y="0">A</tspan></text> <text id="_" data-name="&lt;" class="cls-3" transform="translate(5.81 52.44)"><tspan x="0" y="0">&lt;</tspan></text> </g> </svg>
+                  <span class="title">Guide</span>
+                </h1>
+              </a>
+            </li>
 
-        <div class="extra-actions">
-          <div class="options">
-            <div class="item app_name">
-              <h1 class="title">Painel de Risco</h1>
-            </div>
-          </div>
-        </div>
+            <li class="navSection primary">
+              <a class="item"  routerLink="semantic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Semântica </a>
+              <a class="item" routerLink="sample" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Exemplos </a>
+              <!-- a class="item" routerLink="knowledge" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Conhecimento </a -->
+              <!-- a class="item">Sobre </a -->
+            </li>
+
+            <li class="navSection mobile">
+              <a class="item mobile-menu">
+                <h2>
+                Menu
+                </h2>
+              </a>
+            </li>
+
+          </ul>
+        </nav>
       </div>
     </div>
-  </div>
 
-  <nav role="nav" class="main-nav" *ngIf="showNav" [ngClass]="{ 'active': navStatus } ">
-    <ul>
-      <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleNav('F')"
-      aria-label="dashboaard page "><span class="icon home "></span><span class="title">Home</span></a></li>
-      <!-- li><a routerLink="pipeline" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" 
-      (click)="toggleNav('F')" aria-label="services page"><span class="icon admin"></span><span class="title">Admin</span></a></li -->
-    </ul>
-</nav>
-</header>
+
+
+  </header>
   `,
   styles: []
 })
@@ -40,26 +49,30 @@ export class HeaderComponent implements OnInit {
 
   logoColor: string;
   showNav: boolean;
-  navStatus: boolean;
+  defaultColor: boolean;
 
-  constructor() {
+  constructor(
+    private router:  Router
+  ) {
     this.showNav = false;
-    this.logoColor = '#fff';
-    this.navStatus = false;
+    this.defaultColor = false;
+    router.events.subscribe( (event) => ( event instanceof NavigationEnd ) && this.handleRouteChange() )
+
   }
 
   ngOnInit() {
   }
 
-  getNavStatus($event){
-    this.navStatus = $event;
-  }
-
-  toggleNav(status = null) {
-    if (status === 'F') {
-      this.navStatus = false; return;
+  handleRouteChange = () => {
+    console.log(this.router.url);
+    if (this.router.url !== '/' && this.router.url !== '/semantic' && this.router.url !== '/sample') {
+      this.defaultColor = true;
+    } else {
+      this.defaultColor = false;
     }
-    this.navStatus = !this.navStatus;
+    // if (this.router.url.includes('some_key_part_of_url') {
+    //  do what ever you want to do with your content...
+    // }
   }
 
 }
