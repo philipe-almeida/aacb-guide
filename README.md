@@ -1,4 +1,4 @@
-# AACB - Accessibility Guide for Developers 
+# AACB Accessibility Guide for Developers 
 
 An website guide for developers to explain tricks for development meets 
 accessibility guidelines for WCAG 2.0 content.
