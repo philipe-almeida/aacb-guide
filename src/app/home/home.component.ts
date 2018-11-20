@@ -38,17 +38,18 @@ import { Component, OnInit } from '@angular/core';
       <div class="cards solo">
         <a href="https://mashable.com/2011/04/20/design-for-visually-impaired/#9kOtWajVVPqQ" target="_blank">
           <div class="outer-image">
-            <img src="https://www.go-globe.com/files/2017/04/font-size.jpg"> </div> <div class="body">
+            <img src="./assets/img/acces_5.jpg" alt="Animate impairments people illustration smile">
+          </div>
+          <div class="body">
             <h1 class="title">5 maneiras de garantir que seu site seja acessível aos deficientes visuais</h1>
             <p class="extra-info">
-            <time class="time"></time>
+            <time class="time">27 Jun</time>
             <span class="author">Mashable</span>
           </p>
-            <p class="description">
-            A web está repleta de dicas sobre como criar websites para usuários cegos, a maioria dos quais é voltada para tornar seu...</p>
+          <p class="description">A web está repleta de dicas sobre como criar websites para usuários cegos, a maioria dos quais é voltada para tornar seu...</p>
           </div>
         </a>
-      </div>
+       </div>
       
       <div class="cards solo">
         <a href="https://medium.com/@oieduardorabelo/10-diretrizes-para-melhorar-sua-acessibilidade-na-web-6e35844f9859" target="_blank">
