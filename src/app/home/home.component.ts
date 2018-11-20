@@ -43,7 +43,7 @@ import { Component, OnInit } from '@angular/core';
           <div class="body">
             <h1 class="title">5 maneiras de garantir que seu site seja acessível aos deficientes visuais</h1>
             <p class="extra-info">
-            <time class="time">27 Jun</time>
+            <time class="time">Abr 2011</time>
             <span class="author">Mashable</span>
           </p>
           <p class="description">A web está repleta de dicas sobre como criar websites para usuários cegos, a maioria dos quais é voltada para tornar seu...</p>
@@ -59,7 +59,7 @@ import { Component, OnInit } from '@angular/core';
           <div class="body">
             <h1 class="title">10 diretrizes de acessibilidade na web</h1>
             <p class="extra-info">
-            <time class="time">27 Jun</time>
+            <time class="time">Jul 2018</time>
             <span class="author">Eduardo Rabelo</span>
           </p>
             <p class="description">Reunimos uma lista de dez diretrizes de acessibilidade na Web que irão melhorar o acesso ao seu site ...</p>
@@ -75,7 +75,7 @@ import { Component, OnInit } from '@angular/core';
           <div class="body">
             <h1 class="title">Árvore de Acessibilidade</h1>
             <p class="extra-info">
-            <time class="time">27 Jun</time>
+            <time class="time">Jun 2018</time>
             <span class="author">Google Web Fundamentals</span>
           </p>
             <p class="description">Imagine que você esteja construindo uma interface de usuário somente para usuários de leitores de tela...</p>
@@ -92,7 +92,7 @@ import { Component, OnInit } from '@angular/core';
             <h1 class="title">
             Texto Alternativo para Imagens</h1>
             <p class="extra-info">
-            <time class="time">27 Jun</time>
+            <time class="time">Jun 2018</time>
             <span class="author">Google Web Fundamentals</span>
           </p>
             <p class="description">As imagens são um componente importante da maioria das páginas da Web e são, naturalmente, um ponto sensível...</p>
@@ -108,13 +108,30 @@ import { Component, OnInit } from '@angular/core';
           <div class="body">
             <h1 class="title">A semântica e a navegação de conteúdo</h1>
             <p class="extra-info">
-            <time class="time">27 Jun</time>
+            <time class="time">Jul 2018</time>
             <span class="author">Google Web Fundamentals</span>
           </p>
             <p class="description">Outra técnica importante no ajuste fino da experiência para usuários de tecnologia assistiva envolve garantir que apenas...</p>
           </div>
         </a>
       </div>
+
+      <div class="cards solo">
+      <a href="https://www.go-globe.com/blog/make-your-website-accessible-to-visually-impaired-user/" target="_blank">
+        <div class="outer-image">
+          <img src="https://www.go-globe.com/files/2017/04/color-blind.jpg" alt="Animate impairments people illustration smile">
+        </div>
+        <div class="body">
+          <h1 class="title">
+          Acessibilidade para deficientes visuais</h1>
+          <p class="extra-info">
+          <time class="time">Abr 2017</time>
+          <span class="author">Go Globes</span>
+        </p>
+          <p class="description">Considerando que as pessoas com deficiência visual também navegam em sites, há uma grande necessidade de...</p>
+        </div>
+      </a>
+    </div>
       
 
  

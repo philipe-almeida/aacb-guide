@@ -20,6 +20,7 @@ import { Router, NavigationEnd } from '@angular/router';
             </li>
 
             <li class="navSection primary">
+              <a class="item"  routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
               <a class="item"  routerLink="semantic" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Semântica </a>
               <a class="item" routerLink="sample" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Exemplos </a>
               <!-- a class="item" routerLink="knowledge" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Conhecimento </a -->
