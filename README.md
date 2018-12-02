@@ -1,5 +1,7 @@
 # AACB Web Accessibility Guide 
 
+[Access the guide](https://philipe-almeida.github.io/aacb-guide/). 
+
 An website guide for developers to explain tricks for development meets 
 accessibility guidelines for WCAG 2.0 content.
 
